@@ -1,4 +1,5 @@
 package com.example;
+
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Random;
@@ -18,7 +19,7 @@ import java.util.Scanner;
 	   ARE GOING TO PROVIDE INSIDE THE COMMENTS 'YOUR CODE STARTS HERE' AND 'YOUR CODE ENDS HERE'
 	*/
 	//YOUR CODE STARTS HERE
-	 //YOUR CODE ENDS HERE
+	//YOUR CODE ENDS HERE
 public class WaterBottles21 {
 	
 	 private Scanner scanner;
@@ -34,11 +35,20 @@ public class WaterBottles21 {
 	      this.printStream = printStream;
 	 }
 	 
-	 		 	try {
+	 public int isInputNumberValid()  {
+		 
+			//1. Write the Java Code to accept the valid number of bottles user wants to pick.
+			//2. Use the Instance variable "scanner" to accept the input from the user.
+			//3. In case of valid input, return back the number.
+			//4. To print on console, use this.printStream.print() and NOT the System.out.println()
+			//5. In case of invalid input, print on console exactly as below :- 
+			//   "As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive".
+			//   and return back -1
+			 
+			//YOUR CODE STARTS HERE
+		 	try {
 		 		int choice = scanner.nextInt();
-		 		if(scanner.next() instanceof String) {
-		 			
-		 		} else if(choice >=1 && choice <=4) {
+			 	if(choice >=1 && choice <=4) {
 			 		return choice;
 			 	} else {
 			 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
@@ -48,12 +58,13 @@ public class WaterBottles21 {
 		 	catch (StringIndexOutOfBoundsException e) {
 		 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
 		 		
-		 } 
+		 }
 		 	return -1;
            //YOUR CODE ENDS HERE	
 	 }
+ 
 	 
-		public int pickAfterUser(int pick1) {
+	public int pickAfterUser(int pick1) {
 			//YOUR CODE STARTS HERE
 		
 			num += pick1;
