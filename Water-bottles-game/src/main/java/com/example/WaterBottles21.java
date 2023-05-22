@@ -48,14 +48,14 @@ public class WaterBottles21 {
 			//YOUR CODE STARTS HERE
 		 	try {
 		 		int choice = scanner.nextInt();
-			 	if(choice >=1 || choice <=4) {
+			 	if(choice >= 1 || choice <=4) {
 			 		return choice;
 			 	} else {
 			 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
 			 		return -1;
 			 	}
 		 	}
-		 	catch (StringIndexOutOfBoundsException e) {
+		 	catch (InputMismatchException  e) {
 		 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
 		 		
 		 }
