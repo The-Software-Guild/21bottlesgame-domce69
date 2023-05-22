@@ -132,7 +132,12 @@ public class TestWaterBottles21 {
 		//testGetTheInputNumber();
 	    bb.printGameRules();
 	    String outputText = byteArrayOutputStream.toString();
-	    String key = """
+	    String key = ""
+                +"\nThere are 21 Water bottles"
+                +"\nComputer and yourself, there are 2 players"
+                +"\nAt a time, each one can pick up any no. of bottles between 1 and 4 (inclusive)"
+                +"\nThe one who will have to pick up the last is looser"
+                +"\nPlease play first";
 	    		There are 21 Water bottles
 	    		Computer and yourself, there are 2 players
 	    		At a time, each one can pick up any no. of bottles between 1 and 4 (inclusive)
