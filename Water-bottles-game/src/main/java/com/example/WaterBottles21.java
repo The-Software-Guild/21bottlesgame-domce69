@@ -4,7 +4,6 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
 	/*
 	PLEASE INSERT YOUR CODE STRICTLY BETWEEN BELOW COMMENTED LINES
@@ -46,22 +45,24 @@ public class WaterBottles21 {
 			//   "As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive".
 			//   and return back -1
 			 
-			//YOUR CODE STARTS HERE
-		 	try {
+			try {
 		 		int choice = scanner.nextInt();
-			 	if(choice >= 1 || choice <=4) {
-			 		return choice;
-			 	} else {
+			 	if(choice < 1 || choice > 4) {
+			 		
 			 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
 			 		return -1;
+			 	} else {
+			 		return choice;
 			 	}
 		 	}
-		 	catch (InputMismatchException  e) {
+		 	catch (Exception  e) {
 		 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
 		 		
 		 }
 		 	return -1;
            //YOUR CODE ENDS HERE	
+	 }
+ 
 	 }
  
 	 
