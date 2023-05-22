@@ -1,5 +1,6 @@
 package com.example;
 
+
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Random;
@@ -45,7 +46,8 @@ public class WaterBottles21 {
 			//   "As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive".
 			//   and return back -1
 			 
-			try {
+			//YOUR CODE STARTS HERE
+		 	try {
 		 		int choice = scanner.nextInt();
 			 	if(choice < 1 || choice > 4) {
 			 		
@@ -61,8 +63,6 @@ public class WaterBottles21 {
 		 }
 		 	return -1;
            //YOUR CODE ENDS HERE	
-	 }
- 
 	 }
  
 	 
