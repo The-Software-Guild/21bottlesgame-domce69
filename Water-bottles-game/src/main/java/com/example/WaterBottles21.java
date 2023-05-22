@@ -60,6 +60,9 @@ public class WaterBottles21 {
 			//YOUR CODE STARTS HERE
 		
 			num += pick1;
+			System.out.println("----" + num);
+			
+			
 			if(num + 4 == 20) {
 				num += 4;
 				return 4;
@@ -73,11 +76,15 @@ public class WaterBottles21 {
 				num += 1;
 				return 1;
 			} else {
-				Random rng = new Random();
-				int rand = rng.nextInt(3 - 1 + 1) + 1;
-				num += rand;
-				return rand;
-			}       
+				
+				if(pick1 == 4) {
+					num += 1;
+					return 1;
+				}
+				
+			}    
+			
+			return -1;
 	        //YOUR CODE ENDS HERE
 	}
 	 
