@@ -1,7 +1,7 @@
 package com.example;
-
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Random;
 import java.util.Scanner;
 
 	/*
@@ -45,15 +45,40 @@ public class WaterBottles21 {
 			//   and return back -1
 			 
 			//YOUR CODE STARTS HERE
-                        return -1;
-	                //YOUR CODE ENDS HERE	
+		 int choice = scanner.nextInt();
+		 if(choice >=1 && choice <=4) {
+			 return choice;
+		 } else {
+			 this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+			 return -1;
+		 }
+           //YOUR CODE ENDS HERE	
 	 }
  
 	 
 	public int pickAfterUser(int pick1) {
 			//YOUR CODE STARTS HERE
-                        return -1;
-	                //YOUR CODE ENDS HERE
+		
+			num += pick1;
+			if(num + 4 == 20) {
+				num += 4;
+				return 4;
+			} else if (num + 3 == 20) {
+				num += 3;
+				return 3;
+			} else if(num + 2 == 20) {
+				num += 2;
+				return 2;
+			} else if(num + 1 == 20) {
+				num += 1;
+				return 1;
+			} else {
+				Random rng = new Random();
+				int rand = rng.nextInt(3 - 1 + 1) + 1;
+				num += rand;
+				return rand;
+			}       
+	        //YOUR CODE ENDS HERE
 	}
 	 
 	 
