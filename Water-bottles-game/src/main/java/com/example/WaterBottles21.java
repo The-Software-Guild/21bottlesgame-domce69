@@ -34,7 +34,7 @@ public class WaterBottles21 {
 	      this.printStream = printStream;
 	 }
 	 
-	 	 	 public int isInputNumberValid()  {
+	 	 public int isInputNumberValid()  {
 		 
 			//1. Write the Java Code to accept the valid number of bottles user wants to pick.
 			//2. Use the Instance variable "scanner" to accept the input from the user.
@@ -47,7 +47,11 @@ public class WaterBottles21 {
 			//YOUR CODE STARTS HERE
 		 	try {
 		 		int choice = scanner.nextInt();
-			 	if(choice >=1 && choice <=4) {
+		 		if(scanner.next() instanceof String) {
+		 			this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+		 			return -1;
+		 			
+		 		} else if(choice >=1 && choice <=4) {
 			 		return choice;
 			 	} else {
 			 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
@@ -57,7 +61,7 @@ public class WaterBottles21 {
 		 	catch (StringIndexOutOfBoundsException e) {
 		 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
 		 		
-		 }
+		 } 
 		 	return -1;
            //YOUR CODE ENDS HERE	
 	 }
