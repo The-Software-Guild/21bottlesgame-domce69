@@ -18,7 +18,7 @@ import java.util.Scanner;
 	   ARE GOING TO PROVIDE INSIDE THE COMMENTS 'YOUR CODE STARTS HERE' AND 'YOUR CODE ENDS HERE'
 	*/
 	//YOUR CODE STARTS HERE
-	//YOUR CODE ENDS HERE
+	 //YOUR CODE ENDS HERE
 public class WaterBottles21 {
 	
 	 private Scanner scanner;
