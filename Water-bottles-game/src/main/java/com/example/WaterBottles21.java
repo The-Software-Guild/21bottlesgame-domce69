@@ -56,7 +56,7 @@ public class WaterBottles21 {
 	 }
  
 	 
-	public int pickAfterUser(int pick1) {
+		public int pickAfterUser(int pick1) {
 			//YOUR CODE STARTS HERE
 		
 			num += pick1;
@@ -80,6 +80,15 @@ public class WaterBottles21 {
 				if(pick1 == 4) {
 					num += 1;
 					return 1;
+				} else if(pick1 == 3) {
+					num += 2;
+					return 2;
+				} else if(pick1 == 2) {
+					num += 3;
+					return 3;
+				} else if(pick1 == 1) {
+					num += 4;
+					return 4;
 				}
 				
 			}    
