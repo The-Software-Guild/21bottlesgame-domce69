@@ -46,15 +46,22 @@ public class WaterBottles21 {
 			 
 			//YOUR CODE STARTS HERE
 	
-		 	String t = scanner.next();
-		 	int choice = Integer.parseInt(t);
-		 	if(choice >=1 && choice <=4) {
-		 		return choice;
-		 	} else {
-		 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
-		 		return -1;
-		 }
-           //YOUR CODE ENDS HERE	
+		 	try{
+	        	String t = scanner.next();
+	            int choice = Integer.parseInt(t);
+	            if(choice >=1 && choice <=4) {
+			 		return choice;
+			 	} else {
+			 		this.printStream.print("As per the Game Rules, please pick up bottles between 1 and 4 only, both inclusive");
+			 		return -1;
+			 }
+	        }
+	        catch (NumberFormatException ex){
+	            ex.printStackTrace();
+	        }
+		 	
+		 	return -1;
+			 //YOUR CODE ENDS HERE
 	 }
  
 	 
